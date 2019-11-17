@@ -113,15 +113,15 @@ class SendSMSRoot(Resource):
 # ----------------------------------
 @app.route('/scan')
 def scan():
-    return render_template("phone_verification.html", title='scan invoice')
+    return render_template("phone-verification-form.html", title='scan invoice')
 
 @app.route('/qr.html')
 def qr():
     return render_template("/qr.html", title='QR Code')
 
-@app.route('/verification-form.html')
+@app.route('/pin-form.html')
 def verification():
-    return render_template("verification-form.html", title='verification-form')
+    return render_template("pin-form.html", title='verification-form')
 
 
 if __name__ == '__main__':
