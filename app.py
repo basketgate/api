@@ -5,6 +5,7 @@ from twilio.rest import Client
 import os, qrcode
 import logging
 import phonenumbers
+import config
 
 # Create Flask app
 app = Flask(__name__)
@@ -91,7 +92,8 @@ class SendSMSRoot(Resource):
         logging.error("international : " + international)
 
         # DANGER! This is insecure. See http://twil.io/secure
-
+        account_sid = config.account_sid
+        auth_token = config.auth_token
 
         client = Client(account_sid, auth_token)
         logging.error("client : ")
