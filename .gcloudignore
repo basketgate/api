@@ -16,5 +16,4 @@
 # Python pycache:
 __pycache__/
 
-Dockerfile
 .DS_Store
