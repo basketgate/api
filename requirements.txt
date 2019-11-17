@@ -1,0 +1,7 @@
+flask-restplus==0.12.1
+Pillow==6.2.1
+qrcode==6.1
+phonenumbers==8.10.22
+twilio==6.33.1
+google-cloud-logging==1.14.0
+google-cloud-storage==1.23.0
