@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/basket-gate/basket-gate-api', '.' ]
+images:
+- 'gcr.io/basket-gate/basket-gate-api'
