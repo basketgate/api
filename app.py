@@ -111,26 +111,34 @@ class SendSMSRoot(Resource):
 
 
 # ----------------------------------
-@app.route('/scan',methods=['GET'])
-def scan():
+# this is the phone verification page , user requeste to fill the phone number
+@app.route('/scan', methods=['GET'])
+def verification():
     return render_template("phone-verification-form.html", title='scan invoice')
 
-@app.route('/qr.html',methods=['GET'])
+
+# this is pin entering page , once SMS received , user will be requested to fill the PIN
+@app.route('/pin-form.html', methods=['GET'])
+def pin():
+    return render_template("/pin-form.html", title='pin-form.html')
+
+
+# this page renders the QR code that leads to bit.ly link
+@app.route('/qr.html', methods=['GET'])
 def qr():
     return render_template("/qr.html", title='QR Code')
 
-@app.route('/',methods=['GET'])
+
+# this is place holder for index, meanwhile goes to QR code
+@app.route('/', methods=['GET'])
 def index():
     return render_template("/qr.html", title='QR Code')
 
-@app.route('/robots.txt',methods=['GET'])
+
+# robots txt, dissalow all robots
+@app.route('/robots.txt', methods=['GET'])
 def robots():
     return render_template("/robots.txt", title='robots txt'), {'Content-Type': 'text/plain'}
-
-
-@app.route('/pin-form.html')
-def verification():
-    return render_template("/qr.html", title='index.html')
 
 
 if __name__ == '__main__':
