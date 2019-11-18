@@ -13,7 +13,7 @@ function sendOTP() {
 			data : JSON.stringify(input),
 			success : function(response) {
 				//$(".container").html(response);
-				$(".container").load('verification-form.html')
+				$(".container").load('pin-form.html')
 			}
 		});
 	} else {
