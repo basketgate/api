@@ -114,12 +114,20 @@ class SendSMSRoot(Resource):
 # this is the phone verification page , user requeste to fill the phone number
 @app.route('/scan', methods=['GET'])
 def verification():
+    request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    request.headers["Pragma"] = "no-cache"
+    request.headers["Expires"] = "0"
+    request.headers['Cache-Control'] = 'public, max-age=0'
     return render_template("phone-verification-form.html", title='scan invoice')
 
 
 # this is pin entering page , once SMS received , user will be requested to fill the PIN
 @app.route('/pin-form.html', methods=['GET'])
 def pin():
+    request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    request.headers["Pragma"] = "no-cache"
+    request.headers["Expires"] = "0"
+    request.headers['Cache-Control'] = 'public, max-age=0'
     return render_template("/pin-form.html", title='pin-form.html')
 
 
