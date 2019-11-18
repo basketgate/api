@@ -119,9 +119,17 @@ def scan():
 def qr():
     return render_template("/qr.html", title='QR Code')
 
+@app.route('/')
+def index():
+    return render_template("/qr.html", title='QR Code')
+
+@app.route('/robots.txt')
+def robots():
+    return render_template("/robots.txt", title='robots txt')
+
 @app.route('/pin-form.html')
 def verification():
-    return render_template("pin-form.html", title='verification-form')
+    return render_template("/qr.html", title='index.html')
 
 
 if __name__ == '__main__':
