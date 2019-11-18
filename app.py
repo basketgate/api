@@ -111,21 +111,22 @@ class SendSMSRoot(Resource):
 
 
 # ----------------------------------
-@app.route('/scan')
+@app.route('/scan',methods=['GET'])
 def scan():
     return render_template("phone-verification-form.html", title='scan invoice')
 
-@app.route('/qr.html')
+@app.route('/qr.html',methods=['GET'])
 def qr():
     return render_template("/qr.html", title='QR Code')
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def index():
     return render_template("/qr.html", title='QR Code')
 
-@app.route('/robots.txt')
+@app.route('/robots.txt',methods=['GET'])
 def robots():
-    return render_template("/robots.txt", title='robots txt')
+    return render_template("/robots.txt", title='robots txt'), {'Content-Type': 'text/plain'}
+
 
 @app.route('/pin-form.html')
 def verification():
