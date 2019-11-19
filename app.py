@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, request, send_file, render_template
+from flask import Flask, Blueprint, request, send_file, render_template, send_from_directory
 from flask_restplus import Api, Namespace, Resource, fields
 from io import BytesIO
 from twilio.rest import Client
@@ -114,20 +114,23 @@ class SendSMSRoot(Resource):
 # this is the phone verification page , user requeste to fill the phone number
 @app.route('/scan', methods=['GET'])
 def verification():
-    request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    request.headers["Pragma"] = "no-cache"
-    request.headers["Expires"] = "0"
-    request.headers['Cache-Control'] = 'public, max-age=0'
-    return render_template("phone-verification-form.html", title='scan invoice')
+    #request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    #request.headers["Pragma"] = "no-cache"
+    #request.headers["Expires"] = "0"
+    #request.headers['Cache-Control'] = 'public, max-age=0'
+    if os.getenv('ENV') is None:
+        return render_template("phone-verification-form-no-https.html", title='scan invoice')
+    else:
+        return render_template("phone-verification-form.html", title='scan invoice')
 
 
 # this is pin entering page , once SMS received , user will be requested to fill the PIN
 @app.route('/pin-form.html', methods=['GET'])
 def pin():
-    request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    request.headers["Pragma"] = "no-cache"
-    request.headers["Expires"] = "0"
-    request.headers['Cache-Control'] = 'public, max-age=0'
+    #request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    #request.headers["Pragma"] = "no-cache"
+    #request.headers["Expires"] = "0"
+    #request.headers['Cache-Control'] = 'public, max-age=0'
     return render_template("/pin-form.html", title='pin-form.html')
 
 
@@ -147,7 +150,9 @@ def index():
 @app.route('/robots.txt', methods=['GET'])
 def robots():
     return render_template("/robots.txt", title='robots txt'), {'Content-Type': 'text/plain'}
-
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'img/favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 if __name__ == '__main__':
     port = int(os.getenv("PORT", "8080"))
