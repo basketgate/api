@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" />
+    <title>Offline to Online - one click</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css"/>
+    <meta content="Offline to Online - one click." property="og:title">
+    <meta content="https://basketgate.ai/favicon.ico" property="og:image">
+    <meta content="Offline to Online - one click." property="og:description">
+    <meta content="https://basketgate.ai" property="og:url">
+    <meta content="https://basketgate.ai/favicon.ico" name="twitter:card">
 </head>
 <body>
 
-	<div class="container">
-		<a href="/scan?invoice=1234">
-		<img src="static/img/bar-code.png"  height="400px"/>
-		</a>
-	</div>
+<div class="container">
+    <a href="/scan?invoice=1234">
+        <img height="400px" src="static/img/bar-code.png"/>
+    </a>
+</div>
 
 
 </body>
