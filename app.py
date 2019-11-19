@@ -143,7 +143,7 @@ def qr():
 # this is place holder for index, meanwhile goes to QR code
 @app.route('/', methods=['GET'])
 def index():
-    return render_template("/qr.html", title='QR Code')
+    return render_template("/index.html", title='QR Code')
 
 
 # robots txt, dissalow all robots
