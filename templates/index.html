@@ -1,22 +1,632 @@
-<!DOCTYPE html>
-<html>
+<html class="ArticlePage Page gr__corporate_walmart_com wf-myriadprocondensed-n9-active wf-myriadprocondensed-n3-active wf-myriadprocondensed-n7-active wf-myriadprocondensed-n4-active wf-myriadpro-n4-active wf-myriadprocondensed-n6-active wf-myriadprocondensed-i7-active wf-myriadprocondensed-i4-active wf-myriadpro-i4-active wf-myriadpro-n3-active wf-myriadpro-n7-active wf-myriadpro-n9-active wf-myriadpro-i7-active wf-myriadpro-n6-active wf-active"
+      lang="en-US" itemscope="" itemtype="http://schema.org/WebPage">
 <head>
-    <title>Offline to Online - one click</title>
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css"/>
-    <meta content="Offline to Online - one click." property="og:title">
-    <meta content="https://basketgate.ai/favicon.ico" property="og:image">
-    <meta content="Offline to Online - one click." property="og:description">
-    <meta content="https://basketgate.ai" property="og:url">
-    <meta content="https://basketgate.ai/favicon.ico" name="twitter:card">
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amatic+SC:700">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.corporate.walmart.com/resource/00000167-56f7-d8c5-af6f-f7f7d45c0000/styleguide/AllNoFF.min.fc461fa68f05b8e8a0f481e78b614a0c.gz.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/FontFamilies.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/all.min.css') }}">
+
+
+
+    <style data-theme-colors="">
+
+
+  :root {
+    /* general */
+    --link-color: #1a75cf;
+    --link-hover-color: #6cabe7;
+
+    --underline-color: #6cabe7;
+    --underline-hover-color: #6cabe7;
+    --button-bg-color: #6cabe7;
+    --button-bg-hover-color: #6cabe7;
+    --button-color: #6cabe7;
+    --icon-color: red;
+    --icon-bg-color: red;
+    --icon-hover-color: red;
+    --icon-bg-hover-color: red;
+
+    --mainThemeColor: #1a75cf;
+    --mainThemeColorLighter: #6cabe7;
+    --mainThemeColorDarker: #1c62be;
+
+    --moduleThemeColor: #1a75cf;
+    --mainHighlightColor: #ffb700;
+
+    /* header */
+    --navbar-bg-color: #0071ce;
+    --navbar-bg-color-opacity: rgba(26,117,207,.6);
+    --navbar-bg-hover-color: red;
+    --navbar-item-hover-color: red;
+    --tool-icon-color: white;
+    --tool-icon-hover-color: white;
+    --mobile-nav-menu-item-color: red;
+    --mobile-nav-submenu-bg-color: red;
+    --mobile-nav-submenu-separator-color: red;
+
+    /* footer */
+    --footer-link-color: white;
+    --footer-link-hover-color: #6cabe7;
+    --footer-bg-color: #1a75cf;
+    --footer-sociallinks-color: white;
+    --footer-sociallinks-hover-color: white;
+    --footer-sociallinks-bg-color: #1a75cf;
+    --footer-sociallinks-bg-hover-color: #1a75cf;
+
+    /* section header */
+    --section-header-background-image: true;
+
+    --section-header-back-button-bg-color: red;
+    --section-header-back-button-text-color: red;
+    --section-header-text-color: red;
+
+    /* modules */
+    --dynamic-lead-arrow-hover-color: red;
+    --carousel-arrow-color: #1a75cf;
+    --carousel-arrow-hover-color: #1a75cf;
+    --carousel-mobile-dots-color: #1a75cf;
+    --title-hover-color: red;
+    --small-module-title-color: red;
+    --module-faint-background-color: red;
+    --spotlight-background-color: #f0f6fd;
+    --tabbedBg: #3183d4;
+    --articleModuleBg: #f0f6fd;
+
+    /* lang dropdown */
+    --lang-dropdown-current-color: red;
+    --lang-dropdown-arrow-color: red;
+    --lang-dropdown-border-color: red;
+    --lang-dropdown-entry-color: red;
+    --lang-dropdown-entry-hover-color: red;
+
+    /* search page */
+    --search-dropdowns-border-color: #6cabe7;
+    --search-controls-hover-color: #3183d4;
+    --search-text-color: white;
+    --search-text-underline-color: #6cabe7;
+    --search-button-icon-color: #1a75cf;
+    --search-button-icon-hover-color: white;
+    --search-button-bg-color: white;
+    --search-button-bg-hover-color: #1a75cf;
+
+    /* articles n blogs */
+    --secondary-tags-bg-color: red;
+    --secondary-tags-text-color: red;
+    --secondary-tags-background-hover-color: red;
+  }
+
+
+
+    </style>
+
+
+    <style>.ListCardHorizontal-items-item { clear: both; }
+.ListMasonry-items-item .PromoDidYouKnow-button a {
+    color: #ffb700;
+}
+
+.Enhancement[data-alignment=left], .Enhancement[data-left], .Enhancement[data-right], .Enhancement[data-alignment=right] {
+    clear: both;
+}
+
+.EmployeePage .MainNavigation-promote a {
+    color: #ffb700;
+}
+
+.EmployeePage .MainNavigation-promote a:hover {
+    color: #ffb700;
+}
+.PressReleasePage-articleBody-lead .Lede { display: none; }
+
+@media only screen and (max-width: 767px) {
+    .LandingPage-main {
+        padding-top: 0;
+    }
+
+    .Page[data-fixed-nav] {
+    	padding-top: 50px;
+	}
+
+    .StateProvidenceLocationPage {
+        padding-top: 0;
+    }
+}
+
+    </style>
+    <style>.contact-media-content .GoogleCaptcha.g-recaptcha {
+   position: relative;
+   margin: 0;
+} (edited)
+    </style>
+    <style>.PV3ArticlePage .ActionBarOverlayed-items-item a:hover {
+    color: white;
+}
+.PV3ArticlePage .ActionBarOverlayed-toggle {
+    background: var(--link-color);
+    color: white;
+}
+.PV3ArticlePage-articleBody p a {
+  color: #1a75cf;
+}
+.PV3ArticlePage-articleBody p a:hover {
+  color: #6cabe7;
+}
+.PV3ArticlePage .FooterNavigation .Navigation-items a:hover {
+    color: #1a75cf;
+}
+.PV3ArticlePage .ActionBarOverlayed-toggle[data-collapse-toggle*="\"state\":\"collapsed\""] {
+    color: #1a75cf
+}
+.PV3ArticlePage .ActionBarOverlayed-toggle[data-collapse-toggle*="\"state\":\"collapsed\""]:hover {
+    color: #1a75cf
+}
+.PV3ArticlePage .ActionBarOverlayed-toggle {
+  color: #1a75cf;
+  background: #6cabe7
+}
+.PV3ArticlePage .PV3ArticlePage-articleBody a {
+    color: #1a75cf;
+}
+.PV3ArticlePage .ArticleModule-body a:hover {
+    color: #1a75cf;
+}
+.PV3ArticlePage .ActionBarOverlayed-items-item > a:hover {
+  color: #6cabe7;
+  background: #1a75cf;
+}
+.PV3ArticlePage .ActionBarOverlayed-toggle:hover {
+    color: #fff;
+    background: #1a75cf;
+}
+.CustomLandingPage .FooterNavigation .Navigation-items a:hover {
+    color: #1a75cf;
+}
+    </style>
+    <style>.EventPage-cta.EventPage-future,
+.PromoEvent-addToCalendar {
+ /*   display: none; */
+}
+
+@media only screen and (max-width: 768px) {
+    .MainNavigation .NavigationLanguages, .MainNavigation .NavigationSites {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .MediaObjectPage-main-image img {
+        width: auto;
+    }
+}
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Walmart Privacy Policy</title>
+    <meta name="description" content="Updated September 5, 2019">
+    <link rel="canonical" href="https://corporate.walmart.com/privacy-security/walmart-privacy-policy">
+    <meta name="brightspot.contentId" content="00000150-24fd-d3e8-a7d3-24ff7b910000">
+
+    <meta property="og:title" content="Walmart Privacy Policy">
+
+    <meta property="og:url" content="https://corporate.walmart.com/privacy-security/walmart-privacy-policy">
+    <meta property="og:image" content="">
+
+
+    <meta property="og:image:url" content="">
+
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+    <meta property="og:image:type" content="image">
+
+
+    <meta property="og:description" content="Updated September 5, 2019">
+
+    <meta property="og:site_name" content="Corporate - US">
+
+
+    <meta property="og:type" content="article">
+
+    <meta property="article:published_time" content="2015-10-01T20:07:02.419">
+
+    <meta property="article:modified_time" content="2019-09-06T22:10:05.316">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <meta name="twitter:description" content="Updated September 5, 2019">
+
+
+    <meta name="twitter:site" content="@walmart">
+
+
+    <meta name="twitter:title" content="Walmart Privacy Policy">
+
+
+    <meta property="fb:app_id" content="105223049547814">
+
+    <meta property="brightspot.availableLocales" content="en-US">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://basketgate.ai/favicon.ico">
+    <link rel="icon" type="image/png" href="https://basketgate.ai/favicon.ico">
+
+
+    <meta property="fb:pages" content="1720254911540753">
+    <meta name="google-site-verification" content="tNXJz1wTdY-q4XgBnrjOYtkG3b0wQRRwRSXKHfZkrS0">
+    <style type="text/css">
+        .tk-myriad-pro-condensed{font-family:"myriad-pro-condensed",sans-serif;}.tk-myriad-pro{font-family:"myriad-pro",sans-serif;}
+    </style>
+    <style type="text/css">
+        @font-face{font-family:myriad-pro-condensed;src:url(https://use.typekit.net/af/976c18/0000000000000000000170aa/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("woff2"),url(https://use.typekit.net/af/976c18/0000000000000000000170aa/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("woff"),url(https://use.typekit.net/af/976c18/0000000000000000000170aa/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("opentype");font-weight:900;font-style:normal;}@font-face{font-family:myriad-pro-condensed;src:url(https://use.typekit.net/af/c63dde/0000000000000000000170a8/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/c63dde/0000000000000000000170a8/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/c63dde/0000000000000000000170a8/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:myriad-pro-condensed;src:url(https://use.typekit.net/af/f72c04/0000000000000000000170a4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/f72c04/0000000000000000000170a4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/f72c04/0000000000000000000170a4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:myriad-pro-condensed;src:url(https://use.typekit.net/af/47529e/0000000000000000000170a2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/47529e/0000000000000000000170a2/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/47529e/0000000000000000000170a2/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:myriad-pro-condensed;src:url(https://use.typekit.net/af/9369f8/0000000000000000000170a6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/9369f8/0000000000000000000170a6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/9369f8/0000000000000000000170a6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}@font-face{font-family:myriad-pro-condensed;src:url(https://use.typekit.net/af/24a439/0000000000000000000170a9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/24a439/0000000000000000000170a9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/24a439/0000000000000000000170a9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:myriad-pro-condensed;src:url(https://use.typekit.net/af/af66cf/0000000000000000000170a5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/af66cf/0000000000000000000170a5/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/af66cf/0000000000000000000170a5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:myriad-pro;src:url(https://use.typekit.net/af/95c20a/0000000000000000000170a0/27/l?subset_id=2&fvd=n9&v=3) format("woff2"),url(https://use.typekit.net/af/95c20a/0000000000000000000170a0/27/d?subset_id=2&fvd=n9&v=3) format("woff"),url(https://use.typekit.net/af/95c20a/0000000000000000000170a0/27/a?subset_id=2&fvd=n9&v=3) format("opentype");font-weight:900;font-style:normal;}@font-face{font-family:myriad-pro;src:url(https://use.typekit.net/af/1b1b1e/00000000000000000001709e/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/1b1b1e/00000000000000000001709e/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/1b1b1e/00000000000000000001709e/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:myriad-pro;src:url(https://use.typekit.net/af/2e2357/00000000000000000001709f/27/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/2e2357/00000000000000000001709f/27/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/2e2357/00000000000000000001709f/27/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:myriad-pro;src:url(https://use.typekit.net/af/d32e26/00000000000000000001709b/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/d32e26/00000000000000000001709b/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/d32e26/00000000000000000001709b/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:myriad-pro;src:url(https://use.typekit.net/af/c630c3/000000000000000000017098/27/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/c630c3/000000000000000000017098/27/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/c630c3/000000000000000000017098/27/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:myriad-pro;src:url(https://use.typekit.net/af/cafa63/00000000000000000001709a/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/cafa63/00000000000000000001709a/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/cafa63/00000000000000000001709a/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:myriad-pro;src:url(https://use.typekit.net/af/80c5d0/00000000000000000001709c/27/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/80c5d0/00000000000000000001709c/27/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/80c5d0/00000000000000000001709c/27/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}
+    </style>
+
+
+    <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+    </style>
 </head>
-<body>
 
-<div class="container">
-    <a href="/scan?invoice=1234">
-        <img height="400px" src="static/img/bar-code.png"/>
-    </a>
+<body class="ArticlePage-body" data-gr-c-s-loaded="true">
+
+
+<header class="Header" itemscope="" itemtype="http://schema.org/WPHeader" data-bsp-plugin="Module23820">
+    <div class="Header-contentWrapper" data-bsp-plugin="Module8751">
+
+        <div class="Page-logo"><a href="https://corporate.walmart.com/" data-cms-ai="0">
+            <img class="PageLogo-image"
+                 src="https://cdn.corporate.walmart.com/12/9d/06ecf3584e91acccc37162f09714/logowhite.svg"
+                 alt="Walmart Corporate Homepage" height="30">
+        </a>
+        </div>
+
+
+        <div class="Header-links">
+
+            <div class="Page-logo"><a href="https://corporate.walmart.com/" data-cms-ai="0">
+                <img class="PageLogo-image"
+                     src="https://cdn.corporate.walmart.com/12/9d/06ecf3584e91acccc37162f09714/logowhite.svg"
+                     alt="Walmart Corporate Homepage" height="30">
+            </a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</header>
+
+
+<footer class="Page-footer" itemscope="" itemtype="https://schema.org/WPFooter" data-bsp-plugin="Module23820">
+    <div class="Page-footer-iconLinks">
+
+        <div class="Page-footerLogo"><a href="https://corporate.walmart.com/" data-cms-ai="0">
+            <img class="PageLogo-image"
+                 src="https://cdn.corporate.walmart.com/12/9d/06ecf3584e91acccc37162f09714/logowhite.svg"
+                 alt="Walmart Corporate Homepage" height="40">
+        </a>
+        </div>
+
+
+        <div class="Page-social">
+            <div class="SocialBar">
+                <h2 class="SocialBar-heading">Social</h2>
+
+                <ul class="SocialBar-items">
+
+                    <li class="SocialBar-items-item"><a class="SocialLink" href="https://twitter.com/walmart"
+                                                        target="_blank" data-social-service="twitter" data-cms-ai="0">walmart</a>
+                    </li>
+
+                    <li class="SocialBar-items-item"><a class="SocialLink" href="https://www.instagram.com/walmart/"
+                                                        target="_blank" data-social-service="instagram" data-cms-ai="0">walmart</a>
+                    </li>
+
+                    <li class="SocialBar-items-item"><a class="SocialLink" href="https://www.youtube.com/walmart"
+                                                        target="_blank" data-social-service="youtube" data-cms-ai="0">walmart</a>
+                    </li>
+
+                    <li class="SocialBar-items-item"><a class="SocialLink" href="https://www.pinterest.com/walmart"
+                                                        target="_blank" data-social-service="pinterest" data-cms-ai="0">walmart</a>
+                    </li>
+
+                    <li class="SocialBar-items-item"><a class="SocialLink" href="https://www.facebook.com/walmart"
+                                                        target="_blank" data-social-service="facebook" data-cms-ai="0">walmart</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="Page-footer-links">
+
+        <div class="Page-footerNavigation">
+            <nav class="FooterNavigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+
+
+                <ul class="Navigation-items">
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://corporate.walmart.com/our-story"
+                                   data-cms-ai="0">Our Story</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://corporate.walmart.com/newsroom"
+                                   data-cms-ai="0">Newsroom</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link"
+                                   href="https://corporate.walmart.com/global-responsibility" data-cms-ai="0">Global
+                                    Responsibility</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="http://stock.walmart.com" data-cms-ai="0">Investors</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://corporate.walmart.com/suppliers"
+                                   data-cms-ai="0">Suppliers</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="http://careers.walmart.com" target="_blank"
+                                   data-cms-ai="0">Careers</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="http://www.walmartmuseum.com/" target="_blank"
+                                   data-cms-ai="0">Walmart Museum</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="http://www.walmartlabs.com/" data-cms-ai="0">@Walmart
+                                    Labs</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="http://www.walmart.com" data-cms-ai="0">Shop
+                                    Walmart.com</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://www.samsclub.com/?pid=WalmartStores"
+                                   data-cms-ai="0">Shop SamsClub.com</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+
+            </nav>
+        </div>
+
+
+        <div class="Page-footerContent">
+            <nav class="FooterNavigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+
+
+                <ul class="Navigation-items">
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link"
+                                   href="https://corporate.walmart.com/privacy-security" data-cms-ai="0">Privacy &amp;
+                                    Security</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link"
+                                   href="https://corporate.walmart.com/privacy-security/fraud-alerts/" data-cms-ai="0">Fraud</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link"
+                                   href="https://corporate.walmart.com/privacy-security/california-privacy-rights"
+                                   data-cms-ai="0">California Privacy Rights</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link"
+                                   href="https://corporate.walmart.com/california-transparency" data-cms-ai="0">California
+                                    Supply Chains Act</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link"
+                                   href="https://corporate.walmart.com/frequently-asked-questions" data-cms-ai="0">Frequently
+                                    Asked Questions</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://corporate.walmart.com/contact-us"
+                                   data-cms-ai="0">Contact Us</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://corporate.walmart.com/policies"
+                                   data-cms-ai="0">Policies</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://corporate.walmart.com/recalls"
+                                   data-cms-ai="0">Recalls</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="Navigation-items-item">
+                        <div class="NavigationItem">
+                            <div class="NavigationItem-text">
+
+                                <a class="NavigationItem-text-link" href="https://corporate.walmart.com/terms-of-use"
+                                   data-cms-ai="0">Terms of Use</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+
+            </nav>
+        </div>
+
+
+        <div class="Page-disclaimer">© 2019 Walmart Inc.</div>
+
+
+    </div>
+</footer>
+
+
+<span data-bsp-pv="4f8e492c-6f2f-390e-bc61-f176d3a37ab9"></span><span
+        data-bsp-pv="00000150-24fd-d3e8-a7d3-24ff7b910000"></span>
+<div id="fb-root" class=" fb_reset">
+    <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+        <div>
+            <iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true"
+                    title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0"
+                    allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                    src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f161795025b7c2&amp;origin=https%3A%2F%2Fcorporate.walmart.com"
+                    style="border: none;"></iframe>
+        </div>
+
+    </div>
 </div>
-
-
 </body>
 </html>
