@@ -118,7 +118,7 @@ def verification():
     #request.headers["Pragma"] = "no-cache"
     #request.headers["Expires"] = "0"
     #request.headers['Cache-Control'] = 'public, max-age=0'
-    if os.getenv('ENV') is None:
+    if env == "dev":
         return render_template("phone-verification-form-no-https.html", title='scan invoice')
     else:
         return render_template("phone-verification-form.html", title='scan invoice')
@@ -156,4 +156,6 @@ def favicon():
 
 if __name__ == '__main__':
     port = int(os.getenv("PORT", "8080"))
+    env = os.environ.get("ENV", "dev")
+    logging.error(f"Starting application in {env} mode")
     app.run(host='0.0.0.0', port=port)

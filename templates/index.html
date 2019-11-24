@@ -1,22 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Offline to Online - one click</title>
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css"/>
-    <meta content="Offline to Online - one click." property="og:title">
-    <meta content="https://basketgate.ai/favicon.ico" property="og:image">
-    <meta content="Offline to Online - one click." property="og:description">
-    <meta content="https://basketgate.ai" property="og:url">
-    <meta content="https://basketgate.ai/favicon.ico" name="twitter:card">
+	<title>Coming Soon 5</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link href="https://basketgate.ai/favicon.ico" rel="icon" type="image/png">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<!--===============================================================================================-->
+	 <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+	<!--===============================================================================================-->
 </head>
 <body>
+	
+	
+	<div class="bg-g1 size1 flex-w flex-col-c-sb p-l-15 p-r-15 p-b-30">
 
-<div class="container">
-    <a href="/scan?invoice=1234">
-        <img height="400px" src="static/img/bar-code.png"/>
-    </a>
-</div>
+		<div class="flex-col-c w-full p-t-50 p-b-80">
+			<h3 class="l1-txt1 txt-center p-b-10">
+				Coming Soon
+			</h3>
 
+			<p class="txt-center l1-txt2 p-b-43 wsize2">
+				&nbsp;&nbsp;&nbsp;
+			</p>
+
+			<form class="flex-w flex-c-m w-full contact100-form validate-form">
+				<div class="wrap-input100 validate-input where1" data-validate = "Name is required">
+					<input class="s1-txt3 placeholder0 input100" type="text" name="name" placeholder="Name">
+				</div>
+
+				<div class="wrap-input100 validate-input where1" data-validate = "Email is required: ex@abc.xyz">
+					<input class="s1-txt3 placeholder0 input100" type="text" name="email" placeholder="Email">
+				</div>
+
+				<button class="flex-c-m s1-txt4 size3 how-btn trans-04 where1">
+					Get Updates
+				</button>
+				
+			</form>			
+		</div>
+
+		<span class="s1-txt2 txt-center">
+			@ 2019 BasketGate.ai
+		</span>
+
+	</div>
+
+
+
+	
+
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename="js/jquery-3.2.1.min.js")}}"></script>
+<!--===============================================================================================-->
+   <script src="{{ url_for('static', filename="vendor/bootstrap/js/popper.js")}}"></script>
+	<script src="{{ url_for('static', filename="vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename="vendor/select2/select2.min.js")}}"></script>
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename="vendor/tilt/tilt.jquery.min.js")}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename="js/main.js")}}"></script>
 
 </body>
 </html>

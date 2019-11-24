@@ -1,12 +1,23 @@
 body {
-    font-size: 0.9em;
-    color: #212121;
-    font-family: Arial;
+
 }
+
+.walmart-logo {
+  width: 103px;
+  height: 33px;
+  object-fit: contain;
+}
+
+.fill-logo {
+  width: 375px;
+  height: 60px;
+  object-fit: contain;
+  background-color: #0171d5;
+}
+
 .container{
-	width: 350px;
-    margin: 50px auto;
-    box-sizing: border-box;
+	width: 375px
+    margin: 0px auto;
 }
 
 #frm-mobile-verification {
