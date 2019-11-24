@@ -118,10 +118,10 @@ def verification():
     #request.headers["Pragma"] = "no-cache"
     #request.headers["Expires"] = "0"
     #request.headers['Cache-Control'] = 'public, max-age=0'
-    if env == "dev":
-        return render_template("phone-verification-form-no-https.html", title='scan invoice')
-    else:
-        return render_template("phone-verification-form.html", title='scan invoice')
+    #if env == "dev":
+     #   return render_template("phone-verification-form-no-https.html", title='scan invoice')
+    #else:
+    return render_template("phone-verification-form-new-skin.html", title='scan invoice')
 
 
 # this is pin entering page , once SMS received , user will be requested to fill the PIN

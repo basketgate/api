@@ -55,6 +55,22 @@ Primary use:
     height: 60px;
 }
 
+#demo {
+    background: url(../img/walmart-logo.svg) no-repeat center center;
+    height: 60px;
+    background-color: #0171d5;
+    width: 100%;
+}
+.page-logo-walmart{
+    padding-top: 11px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    object-fit: contain;
+}
 
 .input100 {
   display: block;
@@ -291,6 +307,8 @@ font-family: Barlow;
 .wsize2 {
   max-width: 305px;
 }
+
+
 
 /*//////////////////////////////////////////////////////////////////
 [ Height ]*/
