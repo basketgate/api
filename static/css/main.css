@@ -35,19 +35,34 @@ Primary use:
 [ Input ]*/
 
 .wrap-input100 {
-  width: 280px;
+  width: 301px;
   max-width: calc(100% - 20px);
   height: 50px;
   background: #fff;
-  border-radius: 25px;
+
 }
+
+
+.page-logo{
+
+    padding-top: 11px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 36px;
+    object-fit: contain;
+    background-color: #e7ebf4;
+    width: 100%;
+    height: 60px;
+}
+
 
 .input100 {
   display: block;
   width: 100%;
   height: 100% ;
-  padding: 0 20px 0 30px;
-  border-radius: 25px;
+  padding: 0 0px 0 0px;
+  border: solid 1px #8e9bb7;
+  background-color: #ffffff;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -154,29 +169,48 @@ Primary use:
 }
 
 .s1-txt2 {
-  font-family: Ubuntu-Regular;
-  font-size: 14px;
-  color: #fff;
-  line-height: 1.5;
+  font-family: Alef;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #231f56;
+
 }
 
 .s1-txt3 {
-  font-family: Ubuntu-Bold;
-  font-size: 15px;
-  color: #555555;
-  line-height: 1.4;
+  font-family: Alef;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #8e9bb7;
 }
 
 .s1-txt4 {
-  font-family: Ubuntu-Bold;
-  font-size: 15px;
-  color: #fff;
-  line-height: 1.4;
+  font-family: Barlow;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.02px;
+  text-align: center;
+  color: #2c2378;
 }
 
+.shopper {
+  width: 53px;
+  height: 82px;
+  object-fit: contain;
+}
 /*//////////////////////////////////////////////////////////////////
 [ M-Text 16 - 25 ]*/
-
 
 
 
@@ -184,17 +218,38 @@ Primary use:
 [ L-Text >= 26 ]*/
 .l1-txt1 {
   font-family: Barlow;
-  font-size: 60px;
-  color: #fff;
-  line-height: 1.2;
+  font-size: 65px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.98;
+  letter-spacing: normal;
+  color: #f45543;
+  text-transform: uppercase;
+}
+
+.l1-txt1-soon {
+font-family: Barlow;
+  font-size: 65px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.98;
+  letter-spacing: normal;
+
+  color: #f45543;
   text-transform: uppercase;
 }
 
 .l1-txt2 {
-  font-family: Ubuntu-Regular;
-  font-size: 24px;
-  color: #fff;
-  line-height: 1.5;
+  font-family: Alef;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  color: #2c2378;
 }
 
 .l1-txt3 {
@@ -212,7 +267,7 @@ Primary use:
 [ Size ]*/
 .size1 {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .size2 {
@@ -221,7 +276,7 @@ Primary use:
 }
 
 .size3 {
-  width: 280px;
+  width: 302px;
   max-width: calc(100% - 20px);
   height: 50px;
 }
@@ -234,7 +289,7 @@ Primary use:
 }
 
 .wsize2 {
-  max-width: 526px;
+  max-width: 305px;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -245,15 +300,15 @@ Primary use:
 
 /*//////////////////////////////////////////////////////////////////
 [ Background ]*/
-.bg0 {background-color: #fff;}
+.bg0 {background-color: white;}
 
 /*---------------------------------------------*/
 .bg-g1 {
-  background: #fb5f7e;
-  background: -webkit-linear-gradient(bottom, #f77062, #fe5196);
+  background: white;
+  /*background: -webkit-linear-gradient(bottom, #f77062, #fe5196);
   background: -o-linear-gradient(bottom, #f77062, #fe5196);
   background: -moz-linear-gradient(bottom, #f77062, #fe5196);
-  background: linear-gradient(bottom, #f77062, #fe5196);
+  background: linear-gradient(bottom, #f77062, #fe5196);*/
 }
 
 
@@ -294,9 +349,10 @@ Primary use:
 /*---------------------------------------------*/
 .how-btn {
   padding: 0px 20px;
-  background-color: #222222;
-  border-radius: 25px;
-  color: #fff;
+  object-fit: contain;
+  background-color: #f45543;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -311,11 +367,12 @@ Primary use:
   height: 100%;
   top: 0;
   left: 0;
-  background: #fb2e57;
-  background: -webkit-linear-gradient(top, #f65342, #fb3282);
+  object-fit: contain;
+  background-color: #f45543;
+  /*background: -webkit-linear-gradient(top, #f65342, #fb3282);
   background: -o-linear-gradient(top, #f65342, #fb3282);
   background: -moz-linear-gradient(top, #f65342, #fb3282);
-  background: linear-gradient(top, #f65342, #fb3282);
+  background: linear-gradient(top, #f65342, #fb3282);*/
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
