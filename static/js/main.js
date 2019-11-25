@@ -1,6 +1,9 @@
 var number = "";
 var user_name = "";
 var user_email = "";
+
+
+
 (function ($) {
 	"use strict";
 
@@ -100,6 +103,7 @@ var user_email = "";
 					"user_email": user_email,
 				};
 				console.log("send slack user_name : " + user_name + " user_email " +user_email);
+
 				$.ajax({
 					url: 'api/requestdemo',
 					type: 'POST',
@@ -111,7 +115,7 @@ var user_email = "";
 
 					}
 				});
-
+                $('#exampleModalCenter').modal('show')
 
 		    }
 		    return true
@@ -119,7 +123,7 @@ var user_email = "";
         }
 	}
 
-function showValidate(input) {
+    function showValidate(input) {
 		var thisAlert = $(input).parent();
         console.log("showValidate "+$(input).val());
 		$(thisAlert).addClass('alert-validate');
