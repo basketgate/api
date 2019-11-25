@@ -320,8 +320,13 @@ font-family: Barlow;
 .wsize2 {
   max-width: 305px;
 }
+.wsize3 {
+  width: 90%;
+}
 
-
+.wsize4 {
+  width: 97%;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ Height ]*/
