@@ -1,10 +1,14 @@
+import logging
+import os
+import qrcode
+from io import BytesIO
+
+import phonenumbers
 from flask import Flask, Blueprint, request, send_file, render_template, send_from_directory
 from flask_restplus import Api, Namespace, Resource, fields
-from io import BytesIO
 from twilio.rest import Client
-import os, qrcode
-import logging
-import phonenumbers
+from slack_webhook import Slack
+
 import config
 
 # Create Flask app
@@ -108,6 +112,43 @@ class SendSMSRoot(Resource):
         logging.error("sid : " + message.sid)
         # Create qr code image and return it as HTTP response
         return international
+
+
+# ----------------------------------
+# Create namespace for sending request demo
+request_demo_namespace = Namespace('RequestDemo', description='request Demo related operations')
+# Specify uri of requestdemo namespace as /requestdemo
+api.add_namespace(request_demo_namespace, path='/requestdemo')
+# Define input model
+request_demo_creation_input = request_demo_namespace.model('Sending Request Demo', {
+    'user_name': fields.String(required=True, description='The value that is supposed to be a user name'),
+    'user_email': fields.String(required=True, description='The value that is supposed to be an user email'),
+})
+
+
+# Define API endpoint for sending SMS
+@request_demo_namespace.route('/')
+@request_demo_namespace.doc('Sends request demo to Slack.')
+# ----------------------------------
+class SendSlackRoot(Resource):
+
+    @request_demo_namespace.expect(request_demo_creation_input)
+    @request_demo_namespace.response(400, description='Invalid input provided.')
+    def post(self):
+        # Get name and email to send Slack
+
+        logging.error("Send Slack Root")
+
+        json_input = request.get_json()
+        user_name_raw = json_input['user_name']
+        logging.error("raw : " + user_name_raw)
+        user_email_raw = json_input['user_email']
+        logging.error("raw : " + user_email_raw)
+        slack = Slack(url='https://hooks.slack.com/services/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')
+        slack.post(text=f"User : {user_name_raw} , email : {user_email_raw} have requested a demo")
+
+        # return OK
+        return "OK"
 
 
 # ----------------------------------

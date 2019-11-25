@@ -1,7 +1,9 @@
-flask-restplus==0.12.1
+flask
+flask-restplus==0.13.0
 Pillow==6.2.1
 qrcode==6.1
-phonenumbers==8.10.22
+phonenumbers==8.10.23
 twilio==6.33.1
 google-cloud-logging==1.14.0
 google-cloud-storage==1.23.0
+slack-webhook==1.0.2
