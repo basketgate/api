@@ -16,10 +16,13 @@ function sendOTP() {
 				$(".container").load('pin-form.html')
 			}
 		});
+		return true;
 	} else {
 		$(".error").html('Please enter a valid number!')
 		$(".error").show();
+
 	}
+	return false;
 }
 
 function verifyOTP() {

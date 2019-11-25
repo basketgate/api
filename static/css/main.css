@@ -72,6 +72,20 @@ Primary use:
     object-fit: contain;
 }
 
+
+.error {
+    color: #483333;
+
+    background: #ffbcbc;
+    border: #efb0b0 1px solid;
+    border-radius: 3px;
+    margin: 0 auto;
+
+    width: 302px;
+    /*display:none;*/
+    box-sizing: border-box;
+}
+
 .input100 {
   display: block;
   width: 100%;
@@ -109,15 +123,14 @@ Primary use:
   border: 1px solid #c80000;
   border-radius: 15px;
   padding: 4px 25px 4px 10px;
-  top: 50%;
+  top: 100%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 12px;
+  right: 0px;
   pointer-events: none;
-
   font-family: Ubuntu-Regular;
   color: #c80000;
   font-size: 13px;
@@ -140,13 +153,13 @@ Primary use:
   position: absolute;
   color: #c80000;
   font-size: 14px;
-  top: 50%;
+  top: 100%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 18px;
+  right: 6px;
 }
 
 .alert-validate:hover:before {

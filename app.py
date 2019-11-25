@@ -114,24 +114,25 @@ class SendSMSRoot(Resource):
 # this is the phone verification page , user requeste to fill the phone number
 @app.route('/scan', methods=['GET'])
 def verification():
-    #request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    #request.headers["Pragma"] = "no-cache"
-    #request.headers["Expires"] = "0"
-    #request.headers['Cache-Control'] = 'public, max-age=0'
-    #if env == "dev":
-     #   return render_template("phone-verification-form-no-https.html", title='scan invoice')
-    #else:
+    # request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    # request.headers["Pragma"] = "no-cache"
+    # request.headers["Expires"] = "0"
+    # request.headers['Cache-Control'] = 'public, max-age=0'
+    # if env == "dev":
+    #   return render_template("phone-verification-form-no-https.html", title='scan invoice')
+    # else:
     return render_template("phone-verification-form-new-skin.html", title='scan invoice')
 
 
 # this is pin entering page , once SMS received , user will be requested to fill the PIN
 @app.route('/pin-form.html', methods=['GET'])
 def pin():
-    #request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    #request.headers["Pragma"] = "no-cache"
-    #request.headers["Expires"] = "0"
-    #request.headers['Cache-Control'] = 'public, max-age=0'
     return render_template("/pin-form.html", title='pin-form.html')
+
+
+@app.route('/pin-form-new-skin', methods=['GET'])
+def pinnewskin():
+    return render_template("/pin-form-new-skin.html", title='pin-form-new-skin.html')
 
 
 # this page renders the QR code that leads to bit.ly link
@@ -150,9 +151,13 @@ def index():
 @app.route('/robots.txt', methods=['GET'])
 def robots():
     return render_template("/robots.txt", title='robots txt'), {'Content-Type': 'text/plain'}
+
+
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'img/favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'img/favicon.ico',
+                               mimetype='image/vnd.microsoft.icon')
+
 
 if __name__ == '__main__':
     port = int(os.getenv("PORT", "8080"))
