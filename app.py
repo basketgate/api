@@ -144,7 +144,8 @@ class SendSlackRoot(Resource):
         logging.error("raw : " + user_name_raw)
         user_email_raw = json_input['user_email']
         logging.error("raw : " + user_email_raw)
-        slack = Slack(url='https://hooks.slack.com/services/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')
+
+        slack = Slack(url=f'https://hooks.slack.com/services/{config.slack_key}')
         slack.post(text=f"User : {user_name_raw} , email : {user_email_raw} have requested a demo")
 
         # return OK
