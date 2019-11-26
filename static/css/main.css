@@ -21,6 +21,15 @@ Primary use:
   src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf'); 
 }
 
+@font-face {
+    font-family: Barlow;
+    src:url("../fonts/Barlow/Barlow-Regular.ttf");
+}
+
+@font-face {
+    font-family: Alef;
+    src:url("../fonts/Alef/Alef-Regular.ttf");
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ RS PLUGIN ]*/
