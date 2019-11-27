@@ -183,7 +183,19 @@ Primary use:
     opacity: 1;
   }
 }
+/*-- BIG SCREEN --*/
+@media (min-width: 576px) {
+    .test-media{
+        margin-top:200px;
+    }
+}
+/*-- SMALL SCREEN --*/
+@media (max-width: 576px) {
 
+    .test-media{
+         margin-top:100px;
+    }
+}
 
 /*==================================================================
     TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
