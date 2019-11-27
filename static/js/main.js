@@ -112,10 +112,10 @@ var user_email = "";
 					data: JSON.stringify(input),
 					success: function (response) {
 						console.log("success : !");
-
+                        $('#exampleModalCenter').modal('show')
 					}
 				});
-                $('#exampleModalCenter').modal('show')
+
 
 		    }
 		    return true
