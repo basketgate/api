@@ -151,55 +151,56 @@ class SendSlackRoot(Resource):
         # return OK
         return "OK"
 
+
 # ----------------------------------
 # Create namespace for converting HTML to PDF
 convert_to_pdf_namespace = Namespace('Convert to PDF', description='converting to related operations')
 # Specify uri of convert_to_pdf namespace as /converttopdf
-api.add_namespace(convert_to_pdf_namespace, path='/converttopdf')
-# Define input model
-#convert_to_pdf_creation_input = convert_to_pdf_namespace.model('Converting to PDF', {
-#    'url': fields.String(required=True, description='The value that is supposed to be a URL'),
-#})
+api.add_namespace(convert_to_pdf_namespace, path='/pdf')
 
 
 # Define API endpoint for convert to pdf
-@convert_to_pdf_namespace.route('/')
+@convert_to_pdf_namespace.route('/invoices/<int:id>')
 @convert_to_pdf_namespace.doc('Converts given HTML to PDF')
+@convert_to_pdf_namespace.doc(responses={200: 'OK', 400: 'Invalid Argument', 500: 'Mapping Key Error'},
+                              params={'id': 'Specify the Id associated with the invoice'})
 # ----------------------------------
 class ConvertToPdfRoot(Resource):
 
-#    @convert_to_pdf_namespace.expect(convert_to_pdf_creation_input)
     @convert_to_pdf_namespace.response(400, description='Invalid input provided.')
-    def get(self):
-        # Get URL
+    def get(self, id):
+        # log the id
+        logging.error(f"the id of invoice is : {id} ")
+
+        url = os.path.join(app.root_path, 'static')
+        logging.error(f"the url is : {url}/html/{id}.html ")
+        # load invoice HTML
+
+        document = open(f'{url}/html/{id}.html', 'r')
+        document_content = document.read()
+        document.close()
+        logging.error(f"document loaded ")
 
         response = requests.post(
             'https://api.pdfshift.io/v2/convert',
             auth=(f'{config.pdfshift_key}', ''),
-            json={'source': 'https://basket-gate-api-4yt4mqagkq-uc.a.run.app/static/html/print-import.html'},
+            json={'source': f'https://basketgate.ai/static/html/{id}.html'},
             stream=True
         )
 
         response.raise_for_status()
 
-        with open('result.pdf', 'wb') as output:
+        with open(f'{id}.pdf', 'wb') as output:
             for chunck in response.iter_content():
                 output.write(chunck)
-        return send_file('result.pdf')
 
+        return send_file(f'{id}.pdf')
 
 
 # ----------------------------------
 # this is the phone verification page , user requeste to fill the phone number
 @app.route('/scan', methods=['GET'])
 def verification():
-    # request.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    # request.headers["Pragma"] = "no-cache"
-    # request.headers["Expires"] = "0"
-    # request.headers['Cache-Control'] = 'public, max-age=0'
-    # if env == "dev":
-    #   return render_template("phone-verification-form-no-https.html", title='scan invoice')
-    # else:
     return render_template("phone-verification-form-new-skin.html", title='scan invoice')
 
 
