@@ -4,6 +4,7 @@ import qrcode
 from io import BytesIO
 import requests
 import phonenumbers
+import urllib.parse
 from flask import Flask, Blueprint, request, send_file, render_template, send_from_directory
 from flask_restplus import Api, Namespace, Resource, fields
 from twilio.rest import Client
@@ -180,19 +181,16 @@ class ConvertToPdfRoot(Resource):
         document_content = document.read()
         document.close()
         logging.error(f"document loaded ")
+        page_url = f'https://basketgate.ai/static/html/{id}.html'
+        #response = requests.post('https://api.pdfshift.io/v2/convert',auth=(f'{config.pdfshift_key}', ''),json={'source': page_url},stream=True)
 
-        response = requests.post(
-            'https://api.pdfshift.io/v2/convert',
-            auth=(f'{config.pdfshift_key}', ''),
-            json={'source': f'https://basketgate.ai/static/html/{id}.html'},
-            stream=True
-        )
+        response = requests.get(f'http://api.pdflayer.com/api/convert?access_key={config.pdflayer_key}&document_url={urllib.parse.quote(page_url)}',stream=True)
 
         response.raise_for_status()
 
         with open(f'{id}.pdf', 'wb') as output:
-            for chunck in response.iter_content():
-                output.write(chunck)
+            for chunk in response.iter_content():
+                output.write(chunk)
 
         return send_file(f'{id}.pdf')
 
