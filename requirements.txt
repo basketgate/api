@@ -1,3 +1,4 @@
+requests
 flask
 flask-restplus==0.13.0
 Pillow==6.2.1

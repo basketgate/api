@@ -2,7 +2,7 @@ import logging
 import os
 import qrcode
 from io import BytesIO
-
+import requests
 import phonenumbers
 from flask import Flask, Blueprint, request, send_file, render_template, send_from_directory
 from flask_restplus import Api, Namespace, Resource, fields
@@ -126,7 +126,7 @@ request_demo_creation_input = request_demo_namespace.model('Sending Request Demo
 })
 
 
-# Define API endpoint for sending SMS
+# Define API endpoint for request demo slack
 @request_demo_namespace.route('/')
 @request_demo_namespace.doc('Sends request demo to Slack.')
 # ----------------------------------
@@ -150,6 +150,43 @@ class SendSlackRoot(Resource):
 
         # return OK
         return "OK"
+
+# ----------------------------------
+# Create namespace for converting HTML to PDF
+convert_to_pdf_namespace = Namespace('Convert to PDF', description='converting to related operations')
+# Specify uri of convert_to_pdf namespace as /converttopdf
+api.add_namespace(convert_to_pdf_namespace, path='/converttopdf')
+# Define input model
+#convert_to_pdf_creation_input = convert_to_pdf_namespace.model('Converting to PDF', {
+#    'url': fields.String(required=True, description='The value that is supposed to be a URL'),
+#})
+
+
+# Define API endpoint for convert to pdf
+@convert_to_pdf_namespace.route('/')
+@convert_to_pdf_namespace.doc('Converts given HTML to PDF')
+# ----------------------------------
+class ConvertToPdfRoot(Resource):
+
+#    @convert_to_pdf_namespace.expect(convert_to_pdf_creation_input)
+    @convert_to_pdf_namespace.response(400, description='Invalid input provided.')
+    def get(self):
+        # Get URL
+
+        response = requests.post(
+            'https://api.pdfshift.io/v2/convert',
+            auth=(f'{config.pdfshift_key}', ''),
+            json={'source': 'https://basket-gate-api-4yt4mqagkq-uc.a.run.app/static/html/print-import.html'},
+            stream=True
+        )
+
+        response.raise_for_status()
+
+        with open('result.pdf', 'wb') as output:
+            for chunck in response.iter_content():
+                output.write(chunck)
+        return send_file('result.pdf')
+
 
 
 # ----------------------------------
