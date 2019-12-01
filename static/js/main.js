@@ -71,7 +71,9 @@ var user_email = "";
 			var otp = $(input).val();
 
 			if (otp.length == 4 && otp != null && otp == '7531') {
+				window.open("https://basketgate.ai/api/pdf/invoices/12345", "_blank")
 				window.open("https://grocery.walmart.com/stockup", "_self")
+
 				return true;
 			} else {
 
