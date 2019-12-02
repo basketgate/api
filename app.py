@@ -182,7 +182,7 @@ class ConvertToPdfRoot(Resource):
         document.close()
         logging.error(f"document loaded ")
         page_url = f'https://basketgate.ai/static/html/{id}.html'
-        #response = requests.post('https://api.pdfshift.io/v2/convert',auth=(f'{config.pdfshift_key}', ''),json={'source': page_url},stream=True)
+        # response = requests.post('https://api.pdfshift.io/v2/convert',auth=(f'{config.pdfshift_key}', ''),json={'source': page_url},stream=True)
 
         response = requests.get(f'http://api.pdflayer.com/api/convert?access_key={config.pdflayer_key}&document_url={urllib.parse.quote(page_url)}',stream=True)
 
@@ -192,7 +192,7 @@ class ConvertToPdfRoot(Resource):
             for chunk in response.iter_content():
                 output.write(chunk)
 
-        return send_file(f'{id}.pdf')
+        return send_file(f'{id}.pdf', mimetype='application/pdf', as_attachment=False)
 
 
 # ----------------------------------
