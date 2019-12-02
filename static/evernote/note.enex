@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export3.dtd">
+<en-export export-date="20191202T101140Z" application="Evernote" version="Evernote Mac 7.13 (458080)">
+<note><title>test nome title</title><content><![CDATA[<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note><div>This is a test note</div></en-note>]]></content><created>20191202T094825Z</created><updated>20191202T101118Z</updated><note-attributes><latitude>31.91241473713734</latitude><longitude>34.80327724116552</longitude><altitude>36.00771713256836</altitude><author>dmitry.dobrinsky@gmail.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+</en-export>
